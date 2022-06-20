@@ -13,6 +13,18 @@ public class Main {
 		cliente.generarCodigo();
 		
 		System.out.println(cliente.getApellidos()+" "+cliente.getCategoria()+" "+cliente.getCodigo());
+		
+		Empleado empleado = new Empleado();
+		
+		empleado.setNombre("Laura");
+		empleado.setApellidos("Herrera");
+		empleado.setDocumento("87654321F");
+		empleado.setTipo("Rojo");
+		empleado.setTipoContrato("Indefinido");
+		empleado.setSueldo(1000);
+		
+		System.out.println(empleado.getApellidos()+" "+empleado.getTipoContrato()+" "+empleado.getSueldo());
+		
 	}
 
 }
