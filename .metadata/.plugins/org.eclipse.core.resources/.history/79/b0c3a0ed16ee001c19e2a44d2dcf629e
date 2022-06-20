@@ -1,0 +1,31 @@
+package ejercicio26;
+
+public class Main {
+	public static void main(String[] args) {
+		Long longInt = 0l;
+		byte byteInt = 0;
+		short shortInt = 0;
+		Integer integerInt = 0;
+		
+		System.out.println(longInt.getClass());
+		System.out.println(integerInt.getClass());
+		
+		// A. wrapping automático
+		Byte byteIntWrapped = byteInt;
+		System.out.println(byteIntWrapped.getClass());
+		// alternativa:
+		System.out.println(((Byte) byteInt).getClass());
+		
+		// B. wrapping manual
+		Short shortIntWrapped = Short.valueOf(shortInt);
+		System.out.println(shortIntWrapped.getClass());
+		findTheWrapper('a');
+		
+	}
+	
+	public static void findTheWrapper(Object value) {
+		System.out.println("Wrapper: " + value.getClass().getSimpleName());
+		
+	}
+
+}

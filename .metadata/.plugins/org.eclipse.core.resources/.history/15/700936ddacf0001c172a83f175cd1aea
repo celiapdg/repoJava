@@ -1,0 +1,7 @@
+package com.main;
+
+public class Programmer extends Employee{
+	
+	private int bonus;
+
+}

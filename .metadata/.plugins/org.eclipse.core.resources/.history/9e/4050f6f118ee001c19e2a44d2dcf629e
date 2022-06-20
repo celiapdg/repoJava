@@ -1,0 +1,29 @@
+package ejercicio27;
+
+public class Main {
+	public static void main(String[] args) {
+		// wrapping de mayor a menor tamaño en memoria:
+		double doubleInt = 5;
+		float floatInt = (float) doubleInt;
+		long longInt = (long) floatInt;
+		int intInt = (int) longInt;
+		short shortInt = (short) intInt;
+		byte byteInt = (byte) shortInt;
+		
+		// wrapping de menor a mayor tamaño en memoria:
+		byte byteInt2 = 4;
+		short shortInt2 = (short) byteInt2;
+		int intInt2 = (int) shortInt2;
+		long longInt2 = (long) intInt2;
+		float floatInt2 = (float) longInt2;
+		double doubleIn2t = (double) floatInt2;
+		
+		byte overflow = 100;
+		overflow*=2;
+		System.out.println(overflow);
+		System.out.println(200 -127);
+		System.out.println("El límite de un byte es 127 en el rango positivo, "
+				+ "por lo que pasa de forma circular al rango negativo (comenzando"
+				+ "por -128) y suma lo que falta entre 127 y 200 (63), quedando -56");
+	}
+}

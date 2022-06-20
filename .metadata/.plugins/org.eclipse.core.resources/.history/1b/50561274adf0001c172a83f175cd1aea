@@ -1,0 +1,13 @@
+package com.main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Programmer p = new Programmer();
+		
+		p.setBonus(100);
+		p.setSalary(20000);
+		System.out.println(p.getBonus() + " " + p.getSalary());
+	}
+
+}

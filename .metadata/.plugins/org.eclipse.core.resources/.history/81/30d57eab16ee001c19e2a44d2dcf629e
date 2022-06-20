@@ -1,0 +1,15 @@
+package ejercicio26;
+
+public class Main {
+	public static void main(String[] args) {
+		Long longInt = 0l;
+		byte byteInt = 0;
+		short shortInt = 0;
+		Integer integerInt = 0;
+		
+		System.out.println(longInt.getClass());
+		System.out.println(integerInt.getClass());
+		
+	}
+
+}

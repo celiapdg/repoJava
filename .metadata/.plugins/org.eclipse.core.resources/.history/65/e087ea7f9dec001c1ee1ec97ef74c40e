@@ -1,0 +1,44 @@
+package ejercicio16;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		// ejercicio 1
+		byte valor = (byte) Math.round(Math.random());
+		boolean ok = false;
+		String color = "";
+		if (valor == 1) {
+			ok = true;
+			System.out.println(ok);
+		}
+		
+		if (valor == 0) System.out.println(ok);
+		
+		if (ok) System.out.println("rojo");
+		else System.out.println("negro");
+		
+		//ejercicio 2
+		int num = 19;
+		
+		temperatura(num);
+		
+	}
+	
+	public static void temperatura(double temp) {
+		if (temp < 10) {
+			System.out.println("Clima frío");
+			if (temp < 5) System.out.println("Polar");
+			else System.out.println("Alta montaña");
+		} else if ( temp < 20) {
+			System.out.println("Clima templado");
+			if (temp < 13.5) System.out.println("Oceánico");
+			else if (temp < 16.5) System.out.println("Mediterráneo");
+			else System.out.println("Continental");
+		} else {
+			System.out.println("Clima cálido");
+			if (temp < 23.5) System.out.println("Ecuatorial");
+			else if (temp < 26.5) System.out.println("Tropical");
+			else System.out.println("Desértico");
+		}
+	};
+}

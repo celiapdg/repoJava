@@ -1,0 +1,96 @@
+package ejercicio22;
+
+public class Main {
+	public static void main(String[] args) {
+		String negro = "\033[1;31;40m";
+		String rojo = "\033[1;31;41m";
+		String verde = "\033[1;31;42m";
+		String amarillo = "\033[1;31;43m";
+		String azul = "\033[1;31;44m";
+		String blanco = "\033[1;37;47m";
+		String banda = "\t\t\t\t\t\t";
+		String salto = "\n";
+		
+		//1
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		
+		System.out.println(salto);
+		
+		//2
+		System.out.println(azul+"    "+blanco+"  "+azul+"    "+"\t\t\t\t");
+		System.out.println(azul+"    "+blanco+"  "+azul+"    "+blanco+"\t\t\t\t\t");
+		System.out.println(blanco+"          "+azul+"\t\t\t\t\t");
+		System.out.println(azul+"    "+blanco+"  "+azul+"    "+blanco+"\t\t\t\t\t");
+		System.out.println(azul+"    "+blanco+"  "+azul+"    "+"\t\t\t\t");
+		System.out.println(blanco+banda);
+		System.out.println(azul+banda);
+		System.out.println(blanco+banda);
+		System.out.println(azul+banda);
+		
+		System.out.println(salto);
+		
+		//3
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		
+		System.out.println(salto);
+		
+		//4
+		System.out.println(rojo+banda);
+		System.out.println(rojo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(rojo+banda);
+		System.out.println(rojo+banda);
+		
+		System.out.println(salto);
+		
+		
+		// 5
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+		System.out.println(blanco+banda);
+		System.out.println(blanco+banda);
+		System.out.println(blanco+banda);
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+		
+		System.out.println(salto);
+		
+		//6
+		System.out.println(negro+banda);
+		System.out.println(negro+banda);
+		System.out.println(negro+banda);
+		System.out.println(rojo+banda);
+		System.out.println(rojo+banda);
+		System.out.println(rojo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		
+		System.out.println(salto);
+		
+		System.out.println("\033[2;39;47m"+"esto es una prueba");
+
+	}
+
+}

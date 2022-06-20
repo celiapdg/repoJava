@@ -1,0 +1,66 @@
+package ejercicio23;
+
+public class Main {
+	final static String fondoNegro = "40m";
+	final static String fondoRojo = "41m";
+	final static String fondoVerde = "42m";
+	final static String fondoAmarillo = "43m";
+	final static String fondoAzul = "44m";
+	final static String fondoMagenta = "45m";
+	final static String fondoCyan = "46m";
+	final static String fondoBlanco = "47m";
+	final static String fondoDefault = "49m";
+	final static String fondoReset = "0m";
+	
+	final static String textoNegro = "30m";
+	final static String textoRojo = "31m";
+	final static String textoVerde = "32m";
+	final static String textoAmarillo = "33m";
+	final static String textoAzul = "34m";
+	final static String textoMagenta = "35m";
+	final static String textoCyan = "36m";
+	final static String textoBlanco = "37m";
+	final static String textoDefault = "39m";
+	final static String textoReset = "0m";
+	
+	final static String estiloNormal = "0";
+	final static String estiloNegrita = "1";
+	final static String estiloLigero = "2";
+	final static String estiloCursiva = "3";
+	final static String estiloSub = "4";
+	
+	final static String[] fondos = {fondoNegro,fondoRojo,fondoVerde,
+	                         fondoAmarillo,fondoAzul,fondoMagenta,
+	                         fondoCyan,fondoBlanco,fondoDefault,fondoReset};
+	
+	final static String[] textos = {textoNegro,textoRojo,textoVerde,
+							 textoAmarillo,textoAzul,textoMagenta,
+							 textoCyan,textoBlanco,textoDefault,textoReset};
+	
+	final static String[] estilos = {estiloNormal,estiloNegrita,estiloLigero,estiloCursiva,estiloSub};
+	
+	
+	
+	public static void main(String[] args) {
+		String cadena = "Esta cadena es para pruebecitas :D";
+		
+		for (int i=0; i<100; i++) {
+			System.out.println(randomFormat()+cadena);
+		}
+		
+		
+	}
+	
+	public static String randomFormat() {
+		String fondo = randomSelection(fondos);
+		String texto = randomSelection(textos);
+		String estilo = randomSelection(estilos);
+		return "\033["+estilo+";"+texto+";"+fondo+"m";
+		
+	}
+	
+	public static String randomSelection(String[] array) {
+		int seleccion = (int) Math.round(Math.random()*(array.length-1));
+		return array[seleccion];
+	}
+}

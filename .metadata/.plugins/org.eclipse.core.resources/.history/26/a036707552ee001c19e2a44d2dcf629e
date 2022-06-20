@@ -1,0 +1,12 @@
+package com.main;
+import holaadios.HolaMundo;
+
+
+public class Main {
+	
+public static void main(String[] args) {
+	HolaMundo hola = new HolaMundo();
+	hola.saludar();
+	holaadios.HastaNunqui.patada();
+}
+}

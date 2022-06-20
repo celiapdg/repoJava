@@ -1,0 +1,45 @@
+package ejercicio22;
+
+public class Main {
+	public static void main(String[] args) {
+		String amarillo = "\033[1;31;43m";
+		String azul = "\033[1;31;44m";
+		String blanco = "\033[1;37;47m";
+		String banda = "\t\t\t\t\t\t";
+		String cruz1 = "  "
+		
+		//1
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		
+		//2
+		System.out.println("\033[1;31;44m"+"  ");
+		
+		System.out.println("\033[1;31;44m"+banda);
+		
+		System.out.println("\033[1;31;44m"+banda);
+		
+		System.out.println("\033[1;31;44m"+banda);
+		
+		System.out.println("\033[1;31;44m"+banda);
+		
+		
+		// 5
+		System.out.println("\033[1;31;42m"+banda);
+		System.out.println("\033[1;31;42m"+banda);
+		System.out.println("\033[1;31;42m"+banda);
+		System.out.println("\033[1;37;47m"+banda);
+		System.out.println("\033[1;37;47m"+banda);
+		System.out.println("\033[1;37;47m"+banda);
+		System.out.println("\033[1;31;42m"+banda);
+		System.out.println("\033[1;31;42m"+banda);
+		System.out.println("\033[1;31;42m"+banda);
+	}
+
+}

@@ -1,0 +1,29 @@
+package ejercicio21;
+
+public class Main {
+	public static void main(String[] args) {
+		System.out.println(javaOrNull("java"));
+		System.out.println(javaOrNull("hola"));
+		System.out.println(login("admin","1234"));
+		System.out.println(login("11","1234"));
+		System.out.println(login("admin","121134"));
+		System.out.println(randomBool());
+		System.out.println(randomBool());
+	}
+	
+	public static String javaOrNull(String java) {
+		if (java=="java") return java;
+		else return null;
+	}
+	
+	public static String login(String user, String pass) {
+		if (user == "admin" && pass == "1234") {
+			return "Login true";
+		}else return "Login false";
+	}
+	
+	public static boolean randomBool() {
+		int num = (int) Math.round(Math.random()*100);
+		return num%2==0;
+	}
+}

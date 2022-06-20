@@ -1,0 +1,15 @@
+package ejercicio31;
+
+public class Main {
+	public static void main(String[] args) {
+		String[] tecnologias = {"Markdown", "Regexp", "HTML", "CSS", "JS", "SQL", "Java"};
+		recorrerArray(tecnologias, 0);
+	}
+	
+	public static void recorrerArray(String[] array, int inicio) {
+		System.out.println(array[inicio]);
+		if (inicio < array.length) {
+			recorrerArray(array,inicio++);
+		}
+	}
+}

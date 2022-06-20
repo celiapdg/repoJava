@@ -1,0 +1,15 @@
+
+
+package ilovejava;
+
+public class Main {
+	/**
+	 * Este es el primer método que se ejecutará al arrancar la app
+	 * @see www.google.es
+	 * @author celia
+	 * 
+	 */
+	public static void main(String[] args) {
+		System.out.println("I♥Java");
+	}
+}

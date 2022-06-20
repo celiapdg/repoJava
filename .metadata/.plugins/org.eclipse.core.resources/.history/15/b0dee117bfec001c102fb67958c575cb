@@ -1,0 +1,115 @@
+package ejercicio22;
+
+public class Main {
+	public static void main(String[] args) {
+		String negro = "\033[1;31;40m";
+		String rojo = "\033[1;31;41m";
+		String verde = "\033[1;31;42m";
+		String amarillo = "\033[1;31;43m";
+		String azul = "\033[1;31;44m";
+		String blanco = "\033[1;37;47m";
+		String banda = "\t\t\t\t\t\t";
+		String salto = "\n";
+		
+		//1
+		System.out.println("\033[1;30;49m"+"\033[4m"+"Ucrania"+"\033[0m");
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		
+		System.out.println(salto);
+		
+		//2
+		System.out.println("\033[1;30;49m"+"\033[4m"+"Grecia"+"\033[0m");
+		System.out.println(azul+"    "+blanco+"  "+azul+"    "+"\t\t\t\t");
+		System.out.println(azul+"    "+blanco+"  "+azul+"    "+blanco+"\t\t\t\t\t");
+		System.out.println(blanco+"          "+azul+"\t\t\t\t\t");
+		System.out.println(azul+"    "+blanco+"  "+azul+"    "+blanco+"\t\t\t\t\t");
+		System.out.println(azul+"    "+blanco+"  "+azul+"    "+"\t\t\t\t");
+		System.out.println(blanco+banda);
+		System.out.println(azul+banda);
+		System.out.println(blanco+banda);
+		System.out.println(azul+banda);
+		
+		System.out.println(salto);
+		
+		//3
+		System.out.println("\033[1;30;49m"+"\033[4m"+"Italia"+"\033[0m");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		System.out.println(azul+"             "+blanco+"              "+rojo+"             ");
+		
+		System.out.println(salto);
+		
+		//4
+		System.out.println("\033[1;30;49m"+"\033[4m"+"España"+"\033[0m");
+		System.out.println(rojo+banda);
+		System.out.println(rojo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(rojo+banda);
+		System.out.println(rojo+banda);
+		
+		System.out.println(salto);
+		
+		
+		// 5
+		System.out.println("\033[1;30;49m"+"\033[4m"+"Andalucia"+"\033[0m");
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+		System.out.println(blanco+banda);
+		System.out.println(blanco+banda);
+		System.out.println(blanco+banda);
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+		
+		System.out.println(salto);
+		
+		//6
+		System.out.println("\033[1;30;49m"+"\033[4m"+"Alemania"+"\033[0m");
+		System.out.println(negro+banda);
+		System.out.println(negro+banda);
+		System.out.println(negro+banda);
+		System.out.println(rojo+banda);
+		System.out.println(rojo+banda);
+		System.out.println(rojo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		
+		System.out.println(salto);
+		
+		darFormato("45","33","4","Hola caracola");
+		System.out.println("caracola");
+		resetFormato("Hola caracola");
+		
+	}
+	
+	public static String darFormato(String fondo, String color, String estilo, String texto) {
+		texto = "\033["+estilo+";"+color+";"+fondo+"m"+texto;
+		System.out.println(texto);
+		return texto;
+	}
+	
+	public static String resetFormato(String texto) {
+		texto = "\033[0;39;49m"+texto;
+		System.out.println(texto);
+		return texto;
+	}
+
+}

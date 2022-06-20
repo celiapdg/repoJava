@@ -1,0 +1,51 @@
+package ejercicio19;
+
+public class Main {
+	public static void main(String[] args) {
+		// 1
+		for (int i=0; i<=10; i++) {
+			if (i%2==0) System.out.println(i);
+		}
+		
+		// 2a
+		int[] array = {0,1,2,3,4,5,6,7,8,9};
+		
+		for (int num : array) {
+			if (num%3==0) System.out.println(num);
+		}
+		
+		//2b
+		int j = 0;
+		while (j<array.length) {
+			if (j%3==0) System.out.println(j);
+			j++;
+		}
+		
+		//3
+		int k=0;
+		int limite = 4;
+		do {
+			System.out.println("Hola");
+			k++;
+		}while(k<=limite);
+		
+		
+		String abecedario = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+		String temp = "";
+		
+		for (int z = abecedario.length()-1; z>0; z--) {
+			String letra = String.valueOf(abecedario.charAt(z));
+			temp.concat(letra);
+			abecedario = abecedario.replace(letra, "");			
+
+		}
+		
+		System.out.println(abecedario);
+		
+		for (char letra : temp.toCharArray()) {
+			abecedario.concat(String.valueOf(letra));
+			temp.replace(String.valueOf(letra), "");
+		}
+	}
+
+}

@@ -1,0 +1,19 @@
+package ejercicio29;
+
+import java.util.ArrayList;
+
+public class Main {
+	public static void main(String[] args) {
+		ArrayList<String[]> datos = new ArrayList<String[]>();
+		String[] header = {"Nombre","Apellidos","Curso","Año"};
+		String[] fila1 = {"Laura","López","1º","2020"};
+		String[] fila2 = {"Paco","Herrera","2º","2018"};
+		String[] fila3 = {"Sara","Tala","4º","2021"};
+		datos.add(header);
+		datos.add(fila1);
+		datos.add(fila2);
+		datos.add(fila3);
+		System.out.println(datos.get(0)[0]);
+	}
+
+}

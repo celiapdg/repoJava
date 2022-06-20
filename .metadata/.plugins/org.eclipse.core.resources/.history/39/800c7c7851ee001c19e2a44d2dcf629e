@@ -1,0 +1,9 @@
+package com.main;
+import saludar from holaadios.HolaMundo;
+
+public class Main {
+	
+public static void main(String[] args) {
+	
+}
+}

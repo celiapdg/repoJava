@@ -1,0 +1,46 @@
+package ejercicio22;
+
+public class Main {
+	public static void main(String[] args) {
+		String amarillo = "\033[1;31;43m";
+		String azul = "\033[1;31;44m";
+		String blanco = "\033[1;37;47m";
+		String verde = "\033[1;31;42m";
+		String banda = "\t\t\t\t\t\t";
+
+		
+		//1
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(azul+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		System.out.println(amarillo+banda);
+		
+		//2
+		System.out.println(azul+" \t"+blanco+" "+azul+"\t");
+		
+		System.out.println(azul+banda);
+		
+		System.out.println(azul+banda);
+		
+		System.out.println(azul+banda);
+		
+		System.out.println(azul+banda);
+		
+		
+		// 5
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+		System.out.println(blanco+banda);
+		System.out.println(blanco+banda);
+		System.out.println(blanco+banda);
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+		System.out.println(verde+banda);
+	}
+
+}

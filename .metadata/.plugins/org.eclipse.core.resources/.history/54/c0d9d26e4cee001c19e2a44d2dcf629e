@@ -1,0 +1,9 @@
+package ejercicio28;
+
+public class Main {
+	public static void main(String[] args) {
+		System.out.printf("%s\t%s\t%s", "NOMBRE", "APELLIDO1", "APELLIDO2");
+		System.out.printf("%s    %s%s", "NOMBRE", "apellido1", "apellido2");
+		System.out.printf("%3$s, %2$s, %1$s", "Nombre", "apellido1", "apellido2");
+	}
+}

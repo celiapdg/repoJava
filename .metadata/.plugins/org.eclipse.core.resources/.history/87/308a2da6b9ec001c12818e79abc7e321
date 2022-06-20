@@ -1,0 +1,14 @@
+package ejercicio22;
+
+public class Main {
+	public static void main(String[] args) {
+		String banda = "\t\t\t\t\t\t";
+		System.out.println("\033[1;31;42m"+banda);
+		System.out.println("\033[1;31;42m"+banda);
+		System.out.println("\033[1;37;49m"+banda);
+		System.out.println("\033[1;37;47m"+banda);
+		System.out.println("\033[1;31;42m"+banda);
+		System.out.println("\033[1;31;42m"+banda);
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.main;
+
+
+public class Main {
+
+		public static void main(String[] args) {
+			Car coche1 = new Car();
+			Car coche2 = new Car(10, 10);
+			Car coche3 = new Car(100,100);
+			
+			coche1.setFuel(40);
+			coche1.setSpeed(45);
+			
+			System.out.println("Coche 1: "+coche1.getFuel() + ", " +coche1.getSpeed());
+			System.out.println("Coche 2: "+coche2.getFuel() + ", " +coche2.getSpeed());
+			System.out.println("Coche 3: "+coche3.getFuel() + ", " +coche3.getSpeed());
+			
+		}
+	
+}

@@ -1,0 +1,66 @@
+package ejercicio23;
+
+public class Main {
+	final String fondoNegro = "40m";
+	final String fondoRojo = "41m";
+	final String fondoVerde = "42m";
+	final String fondoAmarillo = "43m";
+	final String fondoAzul = "44m";
+	final String fondoMagenta = "45m";
+	final String fondoCyan = "46m";
+	final String fondoBlanco = "47m";
+	final String fondoDefault = "49m";
+	final String fondoReset = "0m";
+	
+	final String textoNegro = "30m";
+	final String textoRojo = "31m";
+	final String textoVerde = "32m";
+	final String textoAmarillo = "33m";
+	final String textoAzul = "34m";
+	final String textoMagenta = "35m";
+	final String textoCyan = "36m";
+	final String textoBlanco = "37m";
+	final String textoDefault = "39m";
+	final String textoReset = "0m";
+	
+	final String estiloNormal = "0";
+	final String estiloNegrita = "1";
+	final String estiloLigero = "2";
+	final String estiloCursiva = "3";
+	final String estiloSub = "4";
+	
+	final String[] fondos = {fondoNegro,fondoRojo,fondoVerde,
+	                         fondoAmarillo,fondoAzul,fondoMagenta,
+	                         fondoCyan,fondoBlanco,fondoDefault,fondoReset};
+	
+	final String[] textos = {textoNegro,textoRojo,textoVerde,
+							 textoAmarillo,textoAzul,textoMagenta,
+							 textoCyan,textoBlanco,textoDefault,textoReset};
+	
+	final String[] estilos = {estiloNormal,estiloNegrita,estiloLigero,estiloCursiva,estiloSub};
+	
+	
+	
+	public void main(String[] args) {
+		String cadena = "Esta cadena es para pruebecitas :D";
+		
+		for (int i=0; i<10; i++) {
+			System.out.println(randomFormat()+cadena);
+		}
+		
+		
+	}
+	
+	public String randomFormat() {
+		String fondo = randomSelection(fondos);
+		String texto = randomSelection(textos);
+		String estilo = randomSelection(estilos);
+		return "\033["+estilo+";"+texto+";"+fondo+"m";
+		
+	}
+	
+	public String randomSelection(String[] array) {
+		int seleccion = (int) Math.round(Math.random()*(array.length-1));
+		return array[seleccion];
+	}
+}

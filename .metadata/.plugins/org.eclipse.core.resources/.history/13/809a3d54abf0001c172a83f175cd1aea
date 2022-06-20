@@ -1,0 +1,15 @@
+package com.main;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		CreditCard tarjeta = new CreditCard("54445555454545454", "Celia");
+		tarjeta.pay(200);
+		tarjeta.activate();
+		tarjeta.pay(200);
+		tarjeta.pay(1000);
+		
+	}
+
+}

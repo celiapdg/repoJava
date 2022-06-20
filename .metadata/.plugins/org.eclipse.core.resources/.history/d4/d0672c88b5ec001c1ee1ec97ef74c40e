@@ -1,0 +1,14 @@
+package ejercicio21;
+
+public class Main {
+	public static void main(String[] args) {
+		javaOrNull("java");
+		javaOrNull("hola");
+		
+	}
+	
+	public static String javaOrNull(String java) {
+		if (java=="java") return java;
+		else return null;
+	}
+}
