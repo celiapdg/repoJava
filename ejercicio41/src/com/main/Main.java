@@ -45,7 +45,7 @@ public class Main {
 				System.out.println("Has ganado 🎉");
 				break;
 			}else if (alguienGana(tablero,!jugador)&&jugador) {
-				System.out.println("Has perdido");
+				System.out.println("Has perdido :(");
 				break;
 			}
 		}
