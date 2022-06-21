@@ -9,6 +9,7 @@ public class Main {
 		Scanner scn = new Scanner(System.in);
 		ejercicio1(scn);
 
+		//ejercicio 2
 		int[] array = {1,2,3,4};
 		try {
 			muestraItem(array, 4);
