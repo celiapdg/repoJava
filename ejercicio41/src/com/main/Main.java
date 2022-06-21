@@ -41,12 +41,19 @@ public class Main {
 			}
 			posiciones.add(nuevaPosicion);
 			tablero = pintarPosicion(tablero,nuevaPosicion,!jugador);
+			if (alguienGana(tablero,!jugador)&&!jugador) {
+				System.out.println("Has ganado 🎉");
+				break;
+			}else if (alguienGana(tablero,!jugador)&&jugador) {
+				System.out.println("Has perdido");
+				break;
+			}
 		}
 		
 		
 	}
 	
-	public static String[] pintarPosicion(String[] tablero, Integer[] nuevaPosicion, boolean jugador) {
+	public static String[] pintarPosicion(String[] tablero, Integer[] nuevaPosicion, boolean jugador){
 		String fila = tablero[nuevaPosicion[0]];
 		String marca = jugador?"X":"O";
 		
@@ -93,10 +100,45 @@ public class Main {
 										 Integer[] nuevaPosicion) {
 		for(Integer[] posicion:posicionesUsadas) {
 			if (Arrays.equals(posicion, nuevaPosicion)) {
-				System.out.println("Posici�n ocupada");
+				System.out.println("Posición ocupada");
 				return false;
 			}
 		}
 		return true;
+	}
+	
+	public static boolean alguienGana(String[] tablero, boolean jugador) {
+		char marca = jugador?'X':'O';
+		// comprobar filas
+		int ganaFila1 = (int) tablero[1].chars().filter(ch -> ch == marca).count();
+		int ganaFila2 = (int) tablero[2].chars().filter(ch -> ch == marca).count();
+		int ganaFila3 = (int) tablero[3].chars().filter(ch -> ch == marca).count();
+		
+		if (ganaFila1==3||ganaFila2==3||ganaFila3==3) return true;
+		
+		// comprobar columnas
+		if (((tablero[1].charAt(3) == marca)&&
+			(tablero[1].charAt(3) == tablero[2].charAt(3))&&
+			(tablero[1].charAt(3) == tablero[3].charAt(3)))||
+			((tablero[1].charAt(5) == marca)&&
+			(tablero[1].charAt(5) == tablero[2].charAt(5))&&
+			(tablero[1].charAt(5) == tablero[3].charAt(5)))||
+			((tablero[1].charAt(7) == marca)&&
+			(tablero[1].charAt(7) == tablero[2].charAt(7))&&
+			(tablero[1].charAt(7) == tablero[3].charAt(7)))) {
+			return true;
+		}
+		
+		// comprobar diagonales
+		if (((tablero[1].charAt(3) == marca)&&
+				(tablero[1].charAt(3) == tablero[2].charAt(5))&&
+				(tablero[1].charAt(3) == tablero[3].charAt(7)))||
+				((tablero[1].charAt(7) == marca)&&
+				(tablero[1].charAt(7) == tablero[2].charAt(5))&&
+				(tablero[1].charAt(7) == tablero[3].charAt(3)))) {
+				return true;
+			}
+		
+		return false;
 	}
 }
